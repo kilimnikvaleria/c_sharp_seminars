@@ -8,12 +8,10 @@ while (!int.TryParse(Console.ReadLine(), out number) || (number < 0))
     Console.WriteLine("Ошибка ввода! Введите целое положительное число");
 }
 
-int count = 1;
+int count = 2;
 
 // Если нужно исключить N из диапазона, то нужно заменить <= на < в условии цикла.
 while(count <= number) {
-    if (count % 2 == 0) {
-        Console.Write($"{count} ");
-    }
-    count++;
+    Console.Write($"{count} ");
+    count += 2;
 }
