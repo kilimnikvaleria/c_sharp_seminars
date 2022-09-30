@@ -3,7 +3,7 @@
 double number;
 
 Console.WriteLine("Введите трёхзначное число: ");
-while (!double.TryParse(Console.ReadLine(), out number) || ((number < 100) && (number >= 0)) || (number > 999) || ((number < 0) && (number < -999)) || ((number < 0) && (number > -99)))
+while (!double.TryParse(Console.ReadLine(), out number) || ((number < 100) && (number > -100)) || (number >= 1000) || (number <= -1000))
 {
     Console.WriteLine("Ошибка ввода! Введите трёхзначное число");
 }
