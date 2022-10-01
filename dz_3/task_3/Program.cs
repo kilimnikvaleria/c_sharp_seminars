@@ -9,22 +9,16 @@ while (!int.TryParse(Console.ReadLine(), out number))
 
 int[] GetCubeNumers(int number)
 {
-    int[] cubeNumers = new int[number];
+    int[] cubeNumbers = new int[number];
 
     // Заполнение массива результата
-    for (int i = 1; i <= number; i++)
+    for (int i = 0; i < number; i++)
     {
-        cubeNumers[i - 1] = i * i * i;
+        cubeNumbers[i] = Convert.ToInt32(Math. Pow((i+1), 3));
     }
 
-    return cubeNumers;
+    return cubeNumbers;
 }
 
 int[] result = GetCubeNumers(number);
-for (int i = 0; i < result.Length; i++) {
-    if (i < result.Length-1) {
-        Console.Write($"{result[i]}, ");
-    } else {
-        Console.Write(result[i]);
-    }
-}
+Console.Write(string.Join(", ", result));
